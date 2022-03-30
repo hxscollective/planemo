@@ -47,9 +47,10 @@ task('bulk-sell-on-opensea', 'Bulk-setup sale for the NFTs')
       map(glob.sync(`${path}/*`), path => fspath.basename(path)),
       token => Number(token),
     )
+
     const order = {
       accountAddress: account.address,
-      startAmount: 0.05,
+      startAmount: 0.01,
       expirationTime: Math.round(Date.now() / 1000 + 3600 * 24 * Number(days)),
       paymentTokenAddress: WETHContractAddresses[hre.network.name],
       waitForHighestBid: true,
