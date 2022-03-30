@@ -4,4 +4,6 @@ Planemo is a collection of 21 unique illustrations of dark, rogue parts of the u
 
 Your Planemo grants you access to pre-sale in our future mints and will also allow you to directly contribute to our generative art. Visit HxScollective.art for more details about the collection or our other projects.
 
+[See on OpenSea](opensea.io/collection/planemo)
+
 © H × S collective. All rights reserved.
