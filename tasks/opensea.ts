@@ -20,7 +20,7 @@ task('bulk-sell-on-opensea', 'Bulk-setup sale for the NFTs')
     const { ethers } = hre
     const [account] = await ethers.getSigners()
 
-    if (hre.network.name === 'main') {
+    if (hre.network.name === 'mainnet') {
       provider = new HDWalletProvider({
         privateKeys: [process.env.PRODUCTION_ACCOUNT_PRIVATE_KEY!],
         providerOrUrl: process.env.PRODUCTION_ALCHEMY_API_URL!,
@@ -33,14 +33,14 @@ task('bulk-sell-on-opensea', 'Bulk-setup sale for the NFTs')
     }
 
     const seaport = new OpenSeaPort(provider, {
-      networkName: hre.network.name === 'main' ? Network.Main : Network.Rinkeby,
+      networkName: hre.network.name === 'mainnet' ? Network.Main : Network.Rinkeby,
       apiKey: '',
     })
 
     // WETH Contract Addresses
     const WETHContractAddresses: { [key: string]: string } = {
       rinkeby: '0xc778417E063141139Fce010982780140Aa0cD5Ab',
-      main: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      mainnet: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
     }
 
     const tokens = sortBy(
