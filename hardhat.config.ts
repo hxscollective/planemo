@@ -49,7 +49,7 @@ const config: HardhatUserConfig = {
     mainnet: {
       url: PRODUCTION_ALCHEMY_API_URL,
       accounts: [`0x${PRODUCTION_ACCOUNT_PRIVATE_KEY}`],
-      gasPrice: 10 * 1000000000,
+      gasPrice: 30 * 1000000000,
     },
   },
   gasReporter: {
